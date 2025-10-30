@@ -72,16 +72,16 @@ else()
 endif()
 
 # Doxygen
-
-list(FILTER SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/lib/.*")
-list(FILTER SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/src/backward(\.cpp|\.hpp)")
-
-find_package(Doxygen)
-set(DOXYGEN_GENERATE_HTML YES)
-set(DOXYGEN_GENERATE_MAN YES)
-doxygen_add_docs(
-        "docs"
-        ${SRC}
-        ALL
-        WORKING_DIRECTORY "./docs"
-    )
+#
+# list(FILTER SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/lib/.*")
+# list(FILTER SRC EXCLUDE REGEX "${CMAKE_CURRENT_SOURCE_DIR}/src/backward(\.cpp|\.hpp)")
+#
+# find_package(Doxygen)
+# set(DOXYGEN_GENERATE_HTML YES)
+# set(DOXYGEN_GENERATE_MAN YES)
+# doxygen_add_docs(
+#        "docs"
+#        ${SRC}
+#        ALL
+#        WORKING_DIRECTORY "./docs"
+#    )
