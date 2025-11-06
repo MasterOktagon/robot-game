@@ -52,6 +52,8 @@ inline std::string operator ""_s (const char* c, usize){
     return std::string(c);
 }
 
+using namespace std;
+
 // catch2 fallback
 #ifndef CATCH2
     #define CONCAT2(a, b) a##b
