@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5)
 project( proj )
 
-set(ExecutableName "name")
+set(ExecutableName "robot-game")
 
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/build)
@@ -29,7 +29,7 @@ if ( NOT "${CMAKE_BUILD_TYPE}" )
 endif()
 if (${CMAKE_BUILD_TYPE} STREQUAL "Debug")
     message(STATUS "Building in Debug mode...")
-    target_compile_options(${ExecutableName} PRIVATE -DDEBUG_ON -g -ggdb -W -Wall -Wextra -Wno-unused-parameter -fstrict-enums)
+    target_compile_options(${ExecutableName} PRIVATE -DENABLE_DEBUG -g -ggdb -W -Wall -Wextra -Wno-unused-parameter -fstrict-enums)
 else()
     message(STATUS "Building in Release mode...")
     target_compile_options(${ExecutableName} PRIVATE -g -W -Wall -Wextra -Wno-unused-parameter -ffold-simple-inlines -fstrict-enums)
